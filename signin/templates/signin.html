@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load bootstrap3 %}
+{% bootstrap_css %}
+{% bootstrap_javascript %}
+{% bootstrap_messages %}
+
+{% block content %}
+
+	
+	<form class="form-horizontal" method="POST" >
+						{% csrf_token %}						
+  					
+						<div class="col-md-7">
+							
+                        {% bootstrap_form form layout='horizontal' %}  
+          				{% buttons %}
+            <button type="submit" name="signup" value="SUBMIT" class="btn btn-primary">Sign In
+        </button>
+        {% endbuttons %}
+						</div>
+        	
+				</form>
+						
+
+{% endblock %}
